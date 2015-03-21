@@ -9,6 +9,50 @@
 import UIKit
 
 class ViewController: UIViewController {
+    //***** OUTLETS ******
+    //Buttons
+    @IBOutlet weak var deleteColorsButton: UIButton!
+    @IBOutlet weak var addColorButton: UIButton!
+    @IBOutlet weak var hexButton: UIButton!
+    @IBOutlet weak var rgbButton: UIButton!
+    @IBOutlet weak var hsbButton: UIButton!
+    
+    //Images
+    @IBOutlet weak var mixImage: UIImageView!
+    
+    //Labels
+    @IBOutlet weak var resultLabel: UILabel!
+    
+    //Views
+    @IBOutlet weak var homeView: UIView!
+    
+    
+    
+    //***** VARIABLES *****
+    
+    
+    
+    //***** ACTIONS *****
+    @IBAction func deleteAllColors(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func addColor(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func showHEX(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func showRGB(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func showHSB(sender: AnyObject) {
+        
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
