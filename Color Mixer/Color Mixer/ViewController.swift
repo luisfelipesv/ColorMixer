@@ -27,10 +27,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var rgbButton: UIButton!
     @IBOutlet weak var hsbButton: UIButton!
     @IBOutlet weak var resultButton: UIButton!
+    @IBOutlet weak var cancelDeleteButton: UIButton!
+    @IBOutlet weak var okDeleteButton: UIButton!
     
     //Colors
     @IBOutlet weak var newColor: UILabel!
     @IBOutlet weak var mixImage: UIButton!
+    @IBOutlet weak var finalColorImage: UIImageView!
     
     //Views
     @IBOutlet weak var homeView: UIView!
@@ -46,6 +49,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var gTextField: UITextField!
     @IBOutlet weak var bTextField: UITextField!
     
+    //Images
+    @IBOutlet weak var copiedImage: UIImageView!
+    @IBOutlet weak var deleteColorImage: UIImageView!
+    
     
     //***** VARIABLES *****
     //Int
@@ -55,6 +62,7 @@ class ViewController: UIViewController {
     var rFinal = 0
     var gFinal = 0
     var bFinal = 0
+    var color = 100
     
     //Array
     var arrayR = [Int] ()
@@ -92,6 +100,7 @@ class ViewController: UIViewController {
         hsb = "Choose your color"
         resultButton.setTitle("Choose your color", forState: UIControlState.Normal)
         resultButton.enabled = false
+        changeSliders()
     }
     
     @IBAction func addColor(sender: UIButton) {
@@ -142,6 +151,57 @@ class ViewController: UIViewController {
         displayNewColor()
     }
     
+    
+    @IBAction func handleGesture(sender: AnyObject) {
+        if sender.state == UIGestureRecognizerState.Began
+        {
+            showDelete()
+            color = 0
+        }
+    }
+    
+    @IBAction func handleGesture2(sender: AnyObject) {
+        if sender.state == UIGestureRecognizerState.Began
+        {
+            showDelete()
+            color = 1
+        }
+    }
+    
+    @IBAction func handleGesture3(sender: AnyObject) {
+        if sender.state == UIGestureRecognizerState.Began
+        {
+            showDelete()
+            color = 2
+        }
+    }
+    
+    @IBAction func handleGesture4(sender: AnyObject) {
+        if sender.state == UIGestureRecognizerState.Began
+        {
+            showDelete()
+            color = 3
+        }
+    }
+    
+    @IBAction func handleGesture5(sender: AnyObject) {
+        if sender.state == UIGestureRecognizerState.Began
+        {
+            showDelete()
+            color = 4
+        }
+    }
+    
+    @IBAction func cancelDelete(sender: AnyObject) {
+        hideDelete()
+    }
+    
+    @IBAction func okDelete(sender: AnyObject) {
+        deleteColor()
+        hideDelete()
+    }
+    
+    
     @IBAction func cancelAdd(sender: AnyObject) {
         UIView.animateWithDuration(0.2, animations: {
             self.addView.alpha = 0
@@ -168,9 +228,6 @@ class ViewController: UIViewController {
         UIView.animateWithDuration(0.2, animations: {
             self.addView.alpha = 0
         })
-        rFinal = 0
-        gFinal = 0
-        bFinal = 0
         
         if color1Change {
             arrayR[0] = r
@@ -203,22 +260,7 @@ class ViewController: UIViewController {
             arrayB.append(b)
         }
         
-        for i in arrayR {
-            rFinal += i
-        }
-        rFinal /= (arrayR.count)
-        
-        for i in arrayG {
-            gFinal += i
-        }
-        gFinal /= arrayG.count
-        
-        for i in arrayB {
-            bFinal += i
-        }
-        bFinal /= arrayB.count
-        
-        mixImage.backgroundColor = UIColor(red: CGFloat(rFinal)/255, green: CGFloat(gFinal)/255, blue: CGFloat(bFinal)/255, alpha: 1.0)
+        displayMix()
         
         if !colorChange {
             if arrayB.count == 1 {
@@ -251,18 +293,6 @@ class ViewController: UIViewController {
         r = 144
         g = 144
         b = 144
-        
-        setHEX()
-        setRGB()
-        setHSB()
-        
-        if hexPressed {
-            resultButton.setTitle(hex, forState: UIControlState.Normal)
-        } else if rgbPressed {
-            resultButton.setTitle(rgb, forState: UIControlState.Normal)
-        } else if hsbPressed{
-            resultButton.setTitle(hsb, forState: UIControlState.Normal)
-        }
         
         endAddColor()
         resultButton.enabled = true
@@ -297,12 +327,45 @@ class ViewController: UIViewController {
     }
 
     @IBAction func copyResult(sender: AnyObject) {
+        
+        
+        
+        UIView.animateWithDuration(0.2, animations: {
+                self.copiedImage.alpha = 0.8
+        })
+        
+        
+        
+        UIView.animateWithDuration(0.2, delay: 0.3, options: nil, animations: {
+            self.copiedImage.alpha = 0
+        }, completion: nil)
+        
+        
+        
+        
         if hexPressed {
             UIPasteboard.generalPasteboard().string = hex
         } else if rgbPressed {
             UIPasteboard.generalPasteboard().string = rgb
         } else if hsbPressed{
             UIPasteboard.generalPasteboard().string = hsb
+        }
+        
+        
+    }
+    
+    @IBAction func saveImage(sender: AnyObject) {
+        if sender.state == UIGestureRecognizerState.Began
+        {
+            var size = CGSizeMake(500,500)
+            var colorForImage = UIColor(red: CGFloat(rFinal)/255, green: CGFloat(gFinal)/255, blue: CGFloat(bFinal)/255, alpha: 1.0)
+            var rect = CGRectMake(0, 0, 500, 500)
+            UIGraphicsBeginImageContextWithOptions(size, false, 0)
+            colorForImage.setFill()
+            UIRectFill(rect)
+            var image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
         }
     }
     
@@ -311,10 +374,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addView.alpha = 0
+        copiedImage.alpha = 0
         hideAdds()
         hideColors()
         add5ColorButton.hidden = false
         resultButton.enabled = false
+        deleteColorImage.alpha = 0
+        cancelDeleteButton.alpha = 0
+        okDeleteButton.alpha = 0
     }
 
     override func didReceiveMemoryWarning() {
@@ -476,5 +543,114 @@ class ViewController: UIViewController {
         hsbPressed = false
     }
     
+    func showDelete(){
+        UIView.animateWithDuration(0.3, animations: {
+            self.deleteColorImage.alpha = 1
+            self.cancelDeleteButton.alpha = 1
+            self.okDeleteButton.alpha = 1
+        })
+    }
+    
+    func hideDelete(){
+        UIView.animateWithDuration(0.3, animations: {
+            self.deleteColorImage.alpha = 0
+            self.cancelDeleteButton.alpha = 0
+            self.okDeleteButton.alpha = 0
+        })
+    }
+    
+    func deleteColor(){
+        arrayR.removeAtIndex(color)
+        arrayG.removeAtIndex(color)
+        arrayB.removeAtIndex(color)
+        
+        if arrayR.count == 0 {
+            deleteAllColors(1)
+        } else {
+            for var i = 0; i < arrayR.count; i++ {
+                r = arrayR[i]
+                g = arrayG[i]
+                b = arrayB[i]
+                if i == 0 {
+                    color1.backgroundColor = UIColor(red: CGFloat(r)/255, green: CGFloat(g)/255, blue: CGFloat(b)/255, alpha: 1.0)
+                }
+                if i == 1 {
+                    color2.backgroundColor = UIColor(red: CGFloat(r)/255, green: CGFloat(g)/255, blue: CGFloat(b)/255, alpha: 1.0)
+                }
+                if i == 2 {
+                    color3.backgroundColor = UIColor(red: CGFloat(r)/255, green: CGFloat(g)/255, blue: CGFloat(b)/255, alpha: 1.0)
+                }
+                if i == 3 {
+                    color4.backgroundColor = UIColor(red: CGFloat(r)/255, green: CGFloat(g)/255, blue: CGFloat(b)/255, alpha: 1.0)
+                }
+                if i == 4 {
+                    color5.backgroundColor = UIColor(red: CGFloat(r)/255, green: CGFloat(g)/255, blue: CGFloat(b)/255, alpha: 1.0)
+                }
+            }
+        }
+        
+        if arrayR.count == 4 {
+            color5.hidden = true
+            add1ColorButton.hidden = false
+            displayMix()
+        }
+        if arrayR.count == 3 {
+            color4.hidden = true
+            add1ColorButton.hidden = true
+            add2ColorButton.hidden = false
+            displayMix()
+        }
+        if arrayR.count == 2 {
+            color3.hidden = true
+            add2ColorButton.hidden = true
+            add3ColorButton.hidden = false
+            displayMix()
+        }
+        if arrayR.count == 1 {
+            color2.hidden = true
+            add3ColorButton.hidden = true
+            add4ColorButton.hidden = false
+            displayMix()
+        }
+    }
+    
+    func displayMix(){
+        rFinal = 0
+        gFinal = 0
+        bFinal = 0
+        for i in arrayR {
+            rFinal += i
+        }
+        rFinal /= (arrayR.count)
+        
+        for i in arrayG {
+            gFinal += i
+        }
+        gFinal /= arrayG.count
+        
+        for i in arrayB {
+            bFinal += i
+        }
+        bFinal /= arrayB.count
+        
+        setHEX()
+        setRGB()
+        setHSB()
+        
+        if hexPressed {
+            resultButton.setTitle(hex, forState: UIControlState.Normal)
+        } else if rgbPressed {
+            resultButton.setTitle(rgb, forState: UIControlState.Normal)
+        } else if hsbPressed{
+            resultButton.setTitle(hsb, forState: UIControlState.Normal)
+        }
+        
+        mixImage.backgroundColor = UIColor(red: CGFloat(rFinal)/255, green: CGFloat(gFinal)/255, blue: CGFloat(bFinal)/255, alpha: 1.0)
+        
+        r=144
+        g=144
+        b=144
+        changeSliders()
+    }
 }
 

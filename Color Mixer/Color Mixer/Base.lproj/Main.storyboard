@@ -16,207 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lz7-bi-3jy" userLabel="HomeView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparentBg" translatesAutoresizingMaskIntoConstraints="NO" id="fTs-zv-1NK">
-                                        <rect key="frame" x="0.0" y="280" width="375" height="267"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your colors" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKv-6G-lab">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nA-Z2-d0O" userLabel="+5">
-                                        <rect key="frame" x="0.0" y="70" width="375" height="140"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
-                                        <state key="normal" title="+">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xkg-6A-b9d"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q26-hC-28q" userLabel="+4">
-                                        <rect key="frame" x="75" y="70" width="300" height="140"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
-                                        <state key="normal" title="+">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vaz-tG-tJN"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyG-VE-vEQ" userLabel="+3">
-                                        <rect key="frame" x="150" y="70" width="225" height="140"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
-                                        <state key="normal" title="+">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Won-gz-RU4"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEd-gf-OOe" userLabel="+2">
-                                        <rect key="frame" x="225" y="70" width="150" height="140"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
-                                        <state key="normal" title="+">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TpB-Z7-f32"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2E-O5-wak" userLabel="+1">
-                                        <rect key="frame" x="300" y="70" width="75" height="140"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
-                                        <state key="normal" title="+">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Uga-Qk-fPP"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOp-HS-h8K" userLabel="color5">
-                                        <rect key="frame" x="300" y="70" width="75" height="140"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
-                                        <state key="normal">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fpg-wL-XdL"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNO-t1-z8a" userLabel="color4">
-                                        <rect key="frame" x="225" y="70" width="75" height="140"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
-                                        <state key="normal">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Poh-Z9-jqE"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJp-2b-gbA" userLabel="color3">
-                                        <rect key="frame" x="150" y="70" width="75" height="140"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
-                                        <state key="normal">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hAA-KG-WGj"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuI-tJ-Wgd" userLabel="color2">
-                                        <rect key="frame" x="75" y="70" width="75" height="140"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
-                                        <state key="normal">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9by-iU-32B"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTx-OO-o6F" userLabel="color1">
-                                        <rect key="frame" x="0.0" y="70" width="75" height="140"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
-                                        <state key="normal">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Aj5-Tw-RP4"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZe-Zm-Hp9">
-                                        <rect key="frame" x="250" y="547" width="125" height="60"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
-                                        <state key="normal" title="HSV">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="showHSB:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RWM-BF-I7I"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQr-dm-rXG">
-                                        <rect key="frame" x="0.0" y="547" width="125" height="60"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
-                                        <state key="normal" title="HEX">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="showHEX:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lJL-AD-bfG"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your mix" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WA-OO-JBZ">
-                                        <rect key="frame" x="0.0" y="210" width="375" height="70"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iy9-tE-PNu">
-                                        <rect key="frame" x="125" y="547" width="125" height="60"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
-                                        <state key="normal" title="RGB">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="showRGB:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rvj-AX-S2w"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Upf-xA-S1P" userLabel="mixImage">
-                                        <rect key="frame" x="0.0" y="280" width="375" height="267"/>
-                                        <state key="normal">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTj-cZ-jfX" userLabel="deleteAll">
-                                        <rect key="frame" x="331" y="21" width="25" height="27"/>
-                                        <state key="normal" image="deleteAll">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="deleteAllColors:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="daL-pf-jyG"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOp-Oo-41K" userLabel="resultButton">
-                                        <rect key="frame" x="0.0" y="607" width="375" height="60"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
-                                        <state key="normal" title="Choose your colors">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="copyResult:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eNB-uU-hMl"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yjf-Xa-Qkf" userLabel="addView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
@@ -322,6 +121,252 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.098039217293262482" green="0.098039217293262482" blue="0.098039217293262482" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                             </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lz7-bi-3jy" userLabel="HomeView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparentBg" translatesAutoresizingMaskIntoConstraints="NO" id="l8t-rH-whu" userLabel="finalColor">
+                                        <rect key="frame" x="0.0" y="280" width="375" height="267"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparentBg" translatesAutoresizingMaskIntoConstraints="NO" id="fTs-zv-1NK">
+                                        <rect key="frame" x="0.0" y="280" width="375" height="267"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your colors" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKv-6G-lab">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nA-Z2-d0O" userLabel="+5">
+                                        <rect key="frame" x="0.0" y="70" width="375" height="140"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xkg-6A-b9d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q26-hC-28q" userLabel="+4">
+                                        <rect key="frame" x="75" y="70" width="300" height="140"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vaz-tG-tJN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyG-VE-vEQ" userLabel="+3">
+                                        <rect key="frame" x="150" y="70" width="225" height="140"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Won-gz-RU4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEd-gf-OOe" userLabel="+2">
+                                        <rect key="frame" x="225" y="70" width="150" height="140"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TpB-Z7-f32"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2E-O5-wak" userLabel="+1">
+                                        <rect key="frame" x="300" y="70" width="75" height="140"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Uga-Qk-fPP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOp-HS-h8K" userLabel="color5">
+                                        <rect key="frame" x="300" y="70" width="75" height="140"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fpg-wL-XdL"/>
+                                            <outletCollection property="gestureRecognizers" destination="w71-Rs-ciH" appends="YES" id="xXp-Ry-k7O"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNO-t1-z8a" userLabel="color4">
+                                        <rect key="frame" x="225" y="70" width="75" height="140"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Poh-Z9-jqE"/>
+                                            <outletCollection property="gestureRecognizers" destination="wDD-xF-A8H" appends="YES" id="uPu-oY-CwD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJp-2b-gbA" userLabel="color3">
+                                        <rect key="frame" x="150" y="70" width="75" height="140"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hAA-KG-WGj"/>
+                                            <outletCollection property="gestureRecognizers" destination="VKC-pt-2wO" appends="YES" id="2R7-ZL-rgB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuI-tJ-Wgd" userLabel="color2">
+                                        <rect key="frame" x="75" y="70" width="75" height="140"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9by-iU-32B"/>
+                                            <outletCollection property="gestureRecognizers" destination="0IR-F2-d9T" appends="YES" id="F89-cV-tlL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTx-OO-o6F" userLabel="color1">
+                                        <rect key="frame" x="0.0" y="70" width="75" height="140"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Aj5-Tw-RP4"/>
+                                            <outletCollection property="gestureRecognizers" destination="GfH-22-82e" appends="YES" id="jjN-bJ-yoP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZe-Zm-Hp9">
+                                        <rect key="frame" x="250" y="547" width="125" height="60"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
+                                        <state key="normal" title="HSV">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showHSB:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RWM-BF-I7I"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQr-dm-rXG">
+                                        <rect key="frame" x="0.0" y="547" width="125" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
+                                        <state key="normal" title="HEX">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showHEX:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lJL-AD-bfG"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your mix" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WA-OO-JBZ">
+                                        <rect key="frame" x="0.0" y="210" width="375" height="70"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iy9-tE-PNu">
+                                        <rect key="frame" x="125" y="547" width="125" height="60"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
+                                        <state key="normal" title="RGB">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showRGB:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rvj-AX-S2w"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Upf-xA-S1P" userLabel="mixImage">
+                                        <rect key="frame" x="0.0" y="280" width="375" height="267"/>
+                                        <gestureRecognizers/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="FrZ-nc-Q5O" appends="YES" id="ExJ-jJ-QvJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTj-cZ-jfX" userLabel="deleteAll">
+                                        <rect key="frame" x="331" y="21" width="25" height="27"/>
+                                        <state key="normal" image="deleteAll">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deleteAllColors:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="daL-pf-jyG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOp-Oo-41K" userLabel="resultButton">
+                                        <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
+                                        <state key="normal" title="Choose your colors">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="copyResult:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eNB-uU-hMl"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="copied" translatesAutoresizingMaskIntoConstraints="NO" id="edW-Mm-HUX">
+                                        <rect key="frame" x="125" y="351" width="125" height="125"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="delete" translatesAutoresizingMaskIntoConstraints="NO" id="OsH-b7-Eig">
+                                        <rect key="frame" x="62" y="351" width="251" height="125"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eb-s9-FFS">
+                                        <rect key="frame" x="62" y="414" width="125" height="62"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelDelete:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="I2O-fJ-79r"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5A-Dx-43g">
+                                        <rect key="frame" x="188" y="414" width="125" height="62"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
+                                        <state key="normal" title="OK">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="okDelete:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3Oi-Pd-0CX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -346,12 +391,16 @@
                         <outlet property="addView" destination="yjf-Xa-Qkf" id="ghZ-av-u6S"/>
                         <outlet property="bSlider" destination="8wZ-Es-eaB" id="LyH-EQ-OAY"/>
                         <outlet property="bTextField" destination="f2l-Yk-Nds" id="nFi-dQ-KqW"/>
+                        <outlet property="cancelDeleteButton" destination="3eb-s9-FFS" id="3B2-NX-I8m"/>
                         <outlet property="color1" destination="tTx-OO-o6F" id="oJz-a6-IXG"/>
                         <outlet property="color2" destination="yuI-tJ-Wgd" id="s9S-wI-Ewe"/>
                         <outlet property="color3" destination="aJp-2b-gbA" id="Twx-HH-JgL"/>
                         <outlet property="color4" destination="tNO-t1-z8a" id="Nq8-Cn-V5K"/>
                         <outlet property="color5" destination="xOp-HS-h8K" id="eaR-Vg-p3q"/>
+                        <outlet property="copiedImage" destination="edW-Mm-HUX" id="kC0-La-QBg"/>
+                        <outlet property="deleteColorImage" destination="OsH-b7-Eig" id="vBu-ge-Inb"/>
                         <outlet property="deleteColorsButton" destination="zTj-cZ-jfX" id="j52-MF-05g"/>
+                        <outlet property="finalColorImage" destination="l8t-rH-whu" id="AcE-4m-mQ9"/>
                         <outlet property="gSlider" destination="7pB-qg-Nsq" id="y6T-3j-xdV"/>
                         <outlet property="gTextField" destination="xK8-kk-H3Y" id="9ne-dR-LEN"/>
                         <outlet property="hexButton" destination="jQr-dm-rXG" id="cTq-ix-7qU"/>
@@ -359,6 +408,7 @@
                         <outlet property="hsbButton" destination="nZe-Zm-Hp9" id="EmX-9a-z8J"/>
                         <outlet property="mixImage" destination="Upf-xA-S1P" id="LKy-Zu-pSk"/>
                         <outlet property="newColor" destination="4pj-8W-S2j" id="IAy-Z2-PNk"/>
+                        <outlet property="okDeleteButton" destination="p5A-Dx-43g" id="Qlo-fY-X4c"/>
                         <outlet property="rSlider" destination="bAR-yg-UHH" id="Mvy-UY-Vdu"/>
                         <outlet property="rTextField" destination="0w1-yi-5JY" id="qak-Es-3VD"/>
                         <outlet property="resultButton" destination="VOp-Oo-41K" id="RNX-UA-3au"/>
@@ -366,12 +416,44 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="GfH-22-82e">
+                    <connections>
+                        <action selector="handleGesture:" destination="vXZ-lx-hvc" id="wOu-Bn-GWW"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="0IR-F2-d9T">
+                    <connections>
+                        <action selector="handleGesture2:" destination="vXZ-lx-hvc" id="J5x-sE-DWb"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="VKC-pt-2wO">
+                    <connections>
+                        <action selector="handleGesture3:" destination="vXZ-lx-hvc" id="pWh-aR-97Q"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="wDD-xF-A8H">
+                    <connections>
+                        <action selector="handleGesture4:" destination="vXZ-lx-hvc" id="Uji-nC-KV5"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="w71-Rs-ciH">
+                    <connections>
+                        <action selector="handleGesture5:" destination="vXZ-lx-hvc" id="3hA-me-0G0"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="FrZ-nc-Q5O">
+                    <connections>
+                        <action selector="saveImage:" destination="vXZ-lx-hvc" id="3lU-YQ-hqe"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="244.5" y="312.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="cancel" width="25" height="25"/>
+        <image name="copied" width="125" height="125"/>
+        <image name="delete" width="251" height="125"/>
         <image name="deleteAll" width="26" height="26"/>
         <image name="transparentBg" width="375" height="267"/>
     </resources>
