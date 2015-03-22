@@ -52,6 +52,7 @@ class ViewController: UIViewController {
     //Images
     @IBOutlet weak var copiedImage: UIImageView!
     @IBOutlet weak var deleteColorImage: UIImageView!
+    @IBOutlet weak var imageSaved: UIImageView!
     
     
     //***** VARIABLES *****
@@ -145,6 +146,10 @@ class ViewController: UIViewController {
             g = arrayG[4]
             b = arrayB[4]
             addColorFinalButton.setTitle("Change color", forState: UIControlState.Normal)
+        } else if sender.tag == 0 {
+            r = 144
+            g = 144
+            b = 144
         }
         
         changeSliders()
@@ -293,6 +298,7 @@ class ViewController: UIViewController {
         r = 144
         g = 144
         b = 144
+
         
         endAddColor()
         resultButton.enabled = true
@@ -355,17 +361,27 @@ class ViewController: UIViewController {
     }
     
     @IBAction func saveImage(sender: AnyObject) {
-        if sender.state == UIGestureRecognizerState.Began
-        {
-            var size = CGSizeMake(500,500)
-            var colorForImage = UIColor(red: CGFloat(rFinal)/255, green: CGFloat(gFinal)/255, blue: CGFloat(bFinal)/255, alpha: 1.0)
-            var rect = CGRectMake(0, 0, 500, 500)
-            UIGraphicsBeginImageContextWithOptions(size, false, 0)
-            colorForImage.setFill()
-            UIRectFill(rect)
-            var image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
-            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        if sender.state == UIGestureRecognizerState.Began{
+            if arrayR.count != 0 {
+                var size = CGSizeMake(500,500)
+                var colorForImage = UIColor(red: CGFloat(rFinal)/255, green: CGFloat(gFinal)/255, blue: CGFloat(bFinal)/255, alpha: 1.0)
+                var rect = CGRectMake(0, 0, 500, 500)
+                UIGraphicsBeginImageContextWithOptions(size, false, 0)
+                colorForImage.setFill()
+                UIRectFill(rect)
+                var image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+                UIGraphicsEndImageContext()
+                UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                
+                UIView.animateWithDuration(0.2, animations: {
+                    self.imageSaved.alpha = 0.8
+                })
+                
+                UIView.animateWithDuration(0.2, delay: 0.3, options: nil, animations: {
+                    self.imageSaved.alpha = 0
+                    }, completion: nil)
+
+            }
         }
     }
     
@@ -382,6 +398,7 @@ class ViewController: UIViewController {
         deleteColorImage.alpha = 0
         cancelDeleteButton.alpha = 0
         okDeleteButton.alpha = 0
+        imageSaved.alpha = 0
     }
 
     override func didReceiveMemoryWarning() {
@@ -646,11 +663,6 @@ class ViewController: UIViewController {
         }
         
         mixImage.backgroundColor = UIColor(red: CGFloat(rFinal)/255, green: CGFloat(gFinal)/255, blue: CGFloat(bFinal)/255, alpha: 1.0)
-        
-        r=144
-        g=144
-        b=144
-        changeSliders()
     }
 }
 
