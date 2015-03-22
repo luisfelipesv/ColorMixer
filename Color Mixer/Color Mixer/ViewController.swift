@@ -55,10 +55,12 @@ class ViewController: UIViewController {
     var rFinal = 0
     var gFinal = 0
     var bFinal = 0
+    
     //Array
     var arrayR = [Int] ()
     var arrayG = [Int] ()
     var arrayB = [Int] ()
+    
     //Booleans
     var color1Change = false
     var color2Change = false
@@ -66,6 +68,15 @@ class ViewController: UIViewController {
     var color4Change = false
     var color5Change = false
     var colorChange = false
+    var hexPressed = true
+    var rgbPressed = false
+    var hsbPressed = false
+    
+    //Strigns
+    var hex = "Choose your color"
+    var rgb = "Choose your color"
+    var hsb = "Choose your color"
+    
     
     //***** ACTIONS *****
     @IBAction func deleteAllColors(sender: AnyObject) {
@@ -76,7 +87,9 @@ class ViewController: UIViewController {
         arrayR = []
         arrayG = []
         arrayB = []
-        
+        hex = "Choose your color"
+        rgb = "Choose your color"
+        hsb = "Choose your color"
         resultButton.setTitle("Choose your color", forState: UIControlState.Normal)
         
     }
@@ -89,20 +102,46 @@ class ViewController: UIViewController {
         if sender.tag == 1 {
             color1Change = true
             colorChange = true
+            r = arrayR[0]
+            g = arrayG[0]
+            b = arrayB[0]
         } else if sender.tag == 2 {
             color2Change = true
             colorChange = true
+            r = arrayR[1]
+            g = arrayG[1]
+            b = arrayB[1]
         } else if sender.tag == 3 {
             color3Change = true
             colorChange = true
+            r = arrayR[2]
+            g = arrayG[2]
+            b = arrayB[2]
         } else if sender.tag == 4 {
             color4Change = true
             colorChange = true
+            r = arrayR[3]
+            g = arrayG[3]
+            b = arrayB[3]
         } else if sender.tag == 5{
             color5Change = true
             colorChange = true
+            r = arrayR[4]
+            g = arrayG[4]
+            b = arrayB[4]
         }
-        
+        changeSliders()
+        displayNewColor()
+    }
+    
+    @IBAction func cancelAdd(sender: AnyObject) {
+        UIView.animateWithDuration(0.2, animations: {
+            self.addView.alpha = 0
+        })
+        r = 144
+        g = 144
+        b = 144
+        endAddColor()
     }
     
     @IBAction func rChanged(sender: UISlider) {
@@ -201,46 +240,61 @@ class ViewController: UIViewController {
             }
         }
         
+        r = 144
+        g = 144
+        b = 144
         
-        color1Change = false
-        color2Change = false
-        color3Change = false
-        color4Change = false
-        color5Change = false
-        colorChange = false
+        setHEX()
+        setRGB()
+        setHSB()
+        
+        if hexPressed {
+            resultButton.setTitle(hex, forState: UIControlState.Normal)
+        } else if rgbPressed {
+            resultButton.setTitle(rgb, forState: UIControlState.Normal)
+        } else if hsbPressed{
+            resultButton.setTitle(hsb, forState: UIControlState.Normal)
+        }
+        
+        endAddColor()
     }
     
     
     @IBAction func showHEX(sender: AnyObject) {
         cleanHexRgbHsb()
+        deselectHexRgbHsb()
+        hexPressed = true
         hexButton.backgroundColor = UIColor.whiteColor()
         hexButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
-        
+        resultButton.setTitle(hex, forState: UIControlState.Normal)
     }
     
     @IBAction func showRGB(sender: AnyObject) {
         cleanHexRgbHsb()
+        deselectHexRgbHsb()
+        rgbPressed = true
         rgbButton.backgroundColor = UIColor.whiteColor()
         rgbButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        resultButton.setTitle(rgb, forState: UIControlState.Normal)
     }
     
     @IBAction func showHSB(sender: AnyObject) {
         cleanHexRgbHsb()
+        deselectHexRgbHsb()
+        hsbPressed = true
         hsbButton.backgroundColor = UIColor.whiteColor()
         hsbButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        resultButton.setTitle(hsb, forState: UIControlState.Normal)
     }
 
-    //***** ViedDidLoad *****
+    
+    //***** VIEWDIDLOAD *****
     override func viewDidLoad() {
         super.viewDidLoad()
         addView.alpha = 0
         hideAdds()
         hideColors()
         add5ColorButton.hidden = false
-        
-        
-
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -254,6 +308,17 @@ class ViewController: UIViewController {
     
     
     //***** FUNCTIONS *****
+    func setRGB(){
+        rgb = "(\(rFinal),\(gFinal),\(bFinal))"
+    }
+    
+    func setHEX(){
+        
+    }
+    
+    func setHSB(){
+        
+    }
     
     func hideAdds(){
         add5ColorButton.hidden = true
@@ -295,6 +360,30 @@ class ViewController: UIViewController {
         
     }
     
+    func changeSliders(){
+        rTextField.text = "\(r)"
+        gTextField.text = "\(g)"
+        bTextField.text = "\(b)"
+        rSlider.value = Float(r)
+        gSlider.value = Float(g)
+        bSlider.value = Float(b)
+    }
+    
+    func endAddColor() {
+        color1Change = false
+        color2Change = false
+        color3Change = false
+        color4Change = false
+        color5Change = false
+        colorChange = false
+        changeSliders()
+    }
+    
+    func deselectHexRgbHsb(){
+        hexPressed = false
+        rgbPressed = false
+        hsbPressed = false
+    }
     
 }
 
