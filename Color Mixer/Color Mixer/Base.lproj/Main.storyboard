@@ -19,6 +19,9 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lz7-bi-3jy" userLabel="HomeView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparentBg" translatesAutoresizingMaskIntoConstraints="NO" id="fTs-zv-1NK">
+                                        <rect key="frame" x="0.0" y="280" width="375" height="267"/>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your colors" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKv-6G-lab">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
@@ -85,11 +88,11 @@
                                             <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Uga-Qk-fPP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOp-HS-h8K" userLabel="color5">
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOp-HS-h8K" userLabel="color5">
                                         <rect key="frame" x="300" y="70" width="75" height="140"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
-                                        <state key="normal" backgroundImage="transparent.png">
+                                        <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -97,11 +100,11 @@
                                             <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fpg-wL-XdL"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNO-t1-z8a" userLabel="color4">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNO-t1-z8a" userLabel="color4">
                                         <rect key="frame" x="225" y="70" width="75" height="140"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
-                                        <state key="normal" backgroundImage="transparent.png">
+                                        <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -109,11 +112,11 @@
                                             <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Poh-Z9-jqE"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJp-2b-gbA" userLabel="color3">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJp-2b-gbA" userLabel="color3">
                                         <rect key="frame" x="150" y="70" width="75" height="140"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
-                                        <state key="normal" backgroundImage="transparent.png">
+                                        <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -121,11 +124,11 @@
                                             <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hAA-KG-WGj"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuI-tJ-Wgd" userLabel="color2">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuI-tJ-Wgd" userLabel="color2">
                                         <rect key="frame" x="75" y="70" width="75" height="140"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
-                                        <state key="normal" backgroundImage="transparent.png">
+                                        <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -133,11 +136,11 @@
                                             <action selector="addColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9by-iU-32B"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTx-OO-o6F" userLabel="color1">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTx-OO-o6F" userLabel="color1">
                                         <rect key="frame" x="0.0" y="70" width="75" height="140"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
-                                        <state key="normal" backgroundImage="transparent.png">
+                                        <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -167,12 +170,6 @@
                                             <action selector="showHEX:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lJL-AD-bfG"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ou-0h-p7h" userLabel="resultLabel">
-                                        <rect key="frame" x="0.0" y="607" width="375" height="60"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your mix" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WA-OO-JBZ">
                                         <rect key="frame" x="0.0" y="210" width="375" height="70"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
@@ -190,15 +187,15 @@
                                             <action selector="showRGB:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rvj-AX-S2w"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Upf-xA-S1P" userLabel="mixImage">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Upf-xA-S1P" userLabel="mixImage">
                                         <rect key="frame" x="0.0" y="280" width="375" height="267"/>
-                                        <state key="normal" backgroundImage="transparent.png">
+                                        <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTj-cZ-jfX" userLabel="deleteAll">
-                                        <rect key="frame" x="342" y="21" width="25" height="27"/>
-                                        <state key="normal" image="Delete All.png">
+                                        <rect key="frame" x="334" y="21" width="25" height="27"/>
+                                        <state key="normal" image="deleteAll">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -206,10 +203,18 @@
                                             <action selector="deleteAllColors:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="daL-pf-jyG"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOp-Oo-41K" userLabel="resultButton">
+                                        <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
+                                        <state key="normal" title="Choose your colors">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yjf-Xa-Qkf" userLabel="addView">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yjf-Xa-Qkf" userLabel="addView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaN-0j-kgv">
@@ -258,10 +263,16 @@
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="144" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="bAR-yg-UHH">
                                         <rect key="frame" x="54" y="95" width="240" height="31"/>
                                         <color key="minimumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="rChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="9Pz-ll-9qS"/>
+                                        </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="144" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="7pB-qg-Nsq">
                                         <rect key="frame" x="54" y="163" width="240" height="31"/>
                                         <color key="minimumTrackTintColor" red="0.23921568630000001" green="1" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="gChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="eoV-sX-Gco"/>
+                                        </connections>
                                     </slider>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="144" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0w1-yi-5JY">
                                         <rect key="frame" x="300" y="95" width="52" height="30"/>
@@ -278,6 +289,9 @@
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="144" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="8wZ-Es-eaB">
                                         <rect key="frame" x="54" y="224" width="240" height="31"/>
                                         <color key="minimumTrackTintColor" red="0.20784313730000001" green="0.32549019610000002" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="bChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="mEB-0O-A4s"/>
+                                        </connections>
                                     </slider>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="144" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f2l-Yk-Nds">
                                         <rect key="frame" x="300" y="224" width="52" height="30"/>
@@ -286,15 +300,8 @@
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pj-8W-S2j" userLabel="newColor">
-                                        <rect key="frame" x="17" y="306" width="340" height="283"/>
+                                        <rect key="frame" x="17" y="306" width="340" height="284"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfV-Gb-sPn" userLabel="blackLine">
-                                        <rect key="frame" x="17" y="589" width="340" height="1"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -314,11 +321,6 @@
                             <constraint firstAttribute="bottom" secondItem="lz7-bi-3jy" secondAttribute="bottom" id="qtw-14-DW1"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="yjf-Xa-Qkf" secondAttribute="bottom" id="xni-YG-Xlv"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="yjf-Xa-Qkf"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -330,6 +332,7 @@
                         <outlet property="addColorFinalButton" destination="MaN-0j-kgv" id="Dup-ba-Tfk"/>
                         <outlet property="addView" destination="yjf-Xa-Qkf" id="ghZ-av-u6S"/>
                         <outlet property="bSlider" destination="8wZ-Es-eaB" id="LyH-EQ-OAY"/>
+                        <outlet property="bTextField" destination="f2l-Yk-Nds" id="nFi-dQ-KqW"/>
                         <outlet property="color1" destination="tTx-OO-o6F" id="oJz-a6-IXG"/>
                         <outlet property="color2" destination="yuI-tJ-Wgd" id="s9S-wI-Ewe"/>
                         <outlet property="color3" destination="aJp-2b-gbA" id="Twx-HH-JgL"/>
@@ -337,12 +340,15 @@
                         <outlet property="color5" destination="xOp-HS-h8K" id="eaR-Vg-p3q"/>
                         <outlet property="deleteColorsButton" destination="zTj-cZ-jfX" id="j52-MF-05g"/>
                         <outlet property="gSlider" destination="7pB-qg-Nsq" id="y6T-3j-xdV"/>
+                        <outlet property="gTextField" destination="xK8-kk-H3Y" id="9ne-dR-LEN"/>
                         <outlet property="hexButton" destination="jQr-dm-rXG" id="cTq-ix-7qU"/>
                         <outlet property="homeView" destination="lz7-bi-3jy" id="TMI-uN-wsp"/>
                         <outlet property="hsbButton" destination="nZe-Zm-Hp9" id="EmX-9a-z8J"/>
+                        <outlet property="mixImage" destination="Upf-xA-S1P" id="LKy-Zu-pSk"/>
                         <outlet property="newColor" destination="4pj-8W-S2j" id="IAy-Z2-PNk"/>
                         <outlet property="rSlider" destination="bAR-yg-UHH" id="Mvy-UY-Vdu"/>
-                        <outlet property="resultLabel" destination="3Ou-0h-p7h" id="3L9-WL-VXB"/>
+                        <outlet property="rTextField" destination="0w1-yi-5JY" id="qak-Es-3VD"/>
+                        <outlet property="resultButton" destination="VOp-Oo-41K" id="RNX-UA-3au"/>
                         <outlet property="rgbButton" destination="iy9-tE-PNu" id="bO7-OG-Ryr"/>
                     </connections>
                 </viewController>
@@ -352,7 +358,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Delete All.png" width="25" height="27"/>
-        <image name="transparent.png" width="920" height="920"/>
+        <image name="deleteAll" width="25" height="27"/>
+        <image name="transparentBg" width="375" height="267"/>
     </resources>
 </document>

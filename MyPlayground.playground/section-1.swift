@@ -4,23 +4,39 @@ import UIKit
 
 import Foundation
 
+var arrayR = [Int]()
+
+arrayR.count
+arrayR.append(255)
+
+arrayR.count
+arrayR[0]
+
+
+
+mySampleColorLabel.text=NSString(format: "%i,%i,%i", Int(red * 255),Int(green * 255),Int(blue * 255))
+let myTitleText = NSString(format: "%6.2f,%6.2f,%6.2f", Float(red),Float(green),Float(blue))
+mySampleColorButton.setTitle(myTitleText, forState: .Normal)
+
 var red = 0
 var green = 128
 var blue = 128
 
+
+
 //Covertir a hexadecimal
 var hexR = String(red, radix: 16, uppercase: true)
-if countElements(hexR)<2 {
+if count(hexR)<2 {
     hexR = "0" + hexR;
 }
 
 var hexG = String(green, radix: 16, uppercase: true)
-if countElements(hexG)<2 {
+if count(hexG)<2 {
     hexG = "0" + hexG;
 }
 
 var hexB = String(blue, radix: 16, uppercase: true)
-if countElements(hexB)<2 {
+if count(hexB)<2 {
     hexB = "0" + hexB;
 }
 
@@ -102,4 +118,10 @@ v = max
 
 
 println("H,S,V = (\(Int(h))º,\(Int(s))%,\(Int(v))%)")
+
+
+
+
+
+
 
