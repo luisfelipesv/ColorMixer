@@ -120,6 +120,64 @@ v = max
 println("H,S,V = (\(Int(h))º,\(Int(s))%,\(Int(v))%)")
 
 
+////////////////////////////////////////////////////////////////////////
+var animals = [1, 2, 3, 4]
+animals.count
+
+
+//funcion, cunado ya se elimino un objeto del arreglo
+for int i = 0; i < animals.count; i++ {
+    r = arrR[i]
+    g = arrG[i]
+    b = arrB[i]
+    if i == 0 {
+        color1.backgroundColor = UIColor rgb
+    }
+    if i == 1 {
+        color2.backgroundColor = UIColor rgb
+    }
+    if i == 2 {
+        color3.backgroundColor = UIColor rgb
+    }
+    if i == 3 {
+        color4.backgroundColor = UIColor rgb
+    }
+    if i == 4 {
+        color5.backgroundColor = UIColor rgb
+    }
+}
+
+if animals.count == 4 {
+    color5.hidden = true
+    add1Button.hidden = false
+}
+if animals.count == 3 {
+    color4.hidden = true
+    add1Button.hidden = true
+    add2Button.hidden = false
+}
+if animals.count == 2 {
+    color3.hidden = true
+    add2Button.hidden = true
+    add3Button.hidden = false
+}
+if animals.count == 1 {
+    color2.hidden = true
+    add3Button.hidden = true
+    add4Button.hidden = false
+}
+if animals.count == 0 {
+    color1.hidden = true
+    add4Button.hidden = true
+    add5Button.hidden = false
+}
+//Final
+
+
+
+animals.removeAtIndex(2)  //["cats", "dogs", "moose"]
+animals.count
+
 
 
 
