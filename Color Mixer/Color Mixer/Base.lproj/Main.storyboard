@@ -210,6 +210,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="copyResult:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eNB-uU-hMl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -260,14 +263,14 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="144" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="bAR-yg-UHH">
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="144" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="bAR-yg-UHH" userLabel="rSlider">
                                         <rect key="frame" x="54" y="95" width="240" height="31"/>
                                         <color key="minimumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="rChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="9Pz-ll-9qS"/>
                                         </connections>
                                     </slider>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="144" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="7pB-qg-Nsq">
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="144" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="7pB-qg-Nsq" userLabel="gSlider">
                                         <rect key="frame" x="54" y="163" width="240" height="31"/>
                                         <color key="minimumTrackTintColor" red="0.23921568630000001" green="1" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
@@ -286,7 +289,7 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="144" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="8wZ-Es-eaB">
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="144" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="8wZ-Es-eaB" userLabel="bSlider">
                                         <rect key="frame" x="54" y="224" width="240" height="31"/>
                                         <color key="minimumTrackTintColor" red="0.20784313730000001" green="0.32549019610000002" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
@@ -306,7 +309,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MkZ-BI-n1d">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MkZ-BI-n1d" userLabel="cancel">
                                         <rect key="frame" x="314" y="37" width="25" height="25"/>
                                         <state key="normal" image="cancel">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

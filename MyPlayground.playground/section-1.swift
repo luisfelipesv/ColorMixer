@@ -60,17 +60,10 @@ rP = r*100/255
 gP = g*100/255
 bP = b*100/255
 
-//var R : Double
-//var G : Double
-//var B : Double
-//R = r/255
-//G = g/255
-//B = b/255
 
 if rP <= gP {
     min = rP
-}
-else {
+}else {
     min = gP
 }
 
@@ -80,8 +73,7 @@ if min > bP {
 
 if rP >= gP {
     max = rP
-}
-else {
+}else {
     max = gP
 }
 
@@ -94,28 +86,22 @@ var delta = max - min
 if delta != 0 {
     if max == rP {
         h = 60*(((gP-bP)/delta)%6)
-    }
-    if max == gP {
+    } else if max == gP {
         h = 60*(((bP-rP)/delta)+2)
-    }
-    if max == bP {
+    } else if max == bP {
         h = 60*(((rP-gP)/delta)+4)
     }
     
     if max == 0 {
         s = 0
-    }
-    else {
+    } else {
         s = delta/max * 100
     }
-}
-else {
+} else {
     h = 0
 }
 
-
 v = max
-
 
 println("H,S,V = (\(Int(h))º,\(Int(s))%,\(Int(v))%)")
 
@@ -170,6 +156,7 @@ if animals.count == 0 {
     color1.hidden = true
     add4Button.hidden = true
     add5Button.hidden = false
+    resultButton.disable = true
 }
 //Final
 

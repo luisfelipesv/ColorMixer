@@ -91,7 +91,7 @@ class ViewController: UIViewController {
         rgb = "Choose your color"
         hsb = "Choose your color"
         resultButton.setTitle("Choose your color", forState: UIControlState.Normal)
-        
+        resultButton.enabled = false
     }
     
     @IBAction func addColor(sender: UIButton) {
@@ -99,37 +99,45 @@ class ViewController: UIViewController {
             self.addView.alpha = 1
         })
         
+        addColorFinalButton.setTitle("Add color", forState: UIControlState.Normal)
+        
         if sender.tag == 1 {
             color1Change = true
             colorChange = true
             r = arrayR[0]
             g = arrayG[0]
             b = arrayB[0]
+            addColorFinalButton.setTitle("Change color", forState: UIControlState.Normal)
         } else if sender.tag == 2 {
             color2Change = true
             colorChange = true
             r = arrayR[1]
             g = arrayG[1]
             b = arrayB[1]
+            addColorFinalButton.setTitle("Change color", forState: UIControlState.Normal)
         } else if sender.tag == 3 {
             color3Change = true
             colorChange = true
             r = arrayR[2]
             g = arrayG[2]
             b = arrayB[2]
+            addColorFinalButton.setTitle("Change color", forState: UIControlState.Normal)
         } else if sender.tag == 4 {
             color4Change = true
             colorChange = true
             r = arrayR[3]
             g = arrayG[3]
             b = arrayB[3]
+            addColorFinalButton.setTitle("Change color", forState: UIControlState.Normal)
         } else if sender.tag == 5{
             color5Change = true
             colorChange = true
             r = arrayR[4]
             g = arrayG[4]
             b = arrayB[4]
+            addColorFinalButton.setTitle("Change color", forState: UIControlState.Normal)
         }
+        
         changeSliders()
         displayNewColor()
     }
@@ -257,6 +265,7 @@ class ViewController: UIViewController {
         }
         
         endAddColor()
+        resultButton.enabled = true
     }
     
     
@@ -287,6 +296,16 @@ class ViewController: UIViewController {
         resultButton.setTitle(hsb, forState: UIControlState.Normal)
     }
 
+    @IBAction func copyResult(sender: AnyObject) {
+        if hexPressed {
+            UIPasteboard.generalPasteboard().string = hex
+        } else if rgbPressed {
+            UIPasteboard.generalPasteboard().string = rgb
+        } else if hsbPressed{
+            UIPasteboard.generalPasteboard().string = hsb
+        }
+    }
+    
     
     //***** VIEWDIDLOAD *****
     override func viewDidLoad() {
@@ -295,6 +314,7 @@ class ViewController: UIViewController {
         hideAdds()
         hideColors()
         add5ColorButton.hidden = false
+        resultButton.enabled = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -313,11 +333,82 @@ class ViewController: UIViewController {
     }
     
     func setHEX(){
-        
+        var hexR = String(rFinal, radix: 16, uppercase: true)
+        if count(hexR)<2 {
+            hexR = "0" + hexR;
+        }
+
+        var hexG = String(gFinal, radix: 16, uppercase: true)
+        if count(hexG)<2 {
+            hexG = "0" + hexG;
+        }
+
+        var hexB = String(bFinal, radix: 16, uppercase: true)
+        if count(hexB)<2 {
+            hexB = "0" + hexB;
+        }
+        hex = "#\(hexR)\(hexG)\(hexB)"
     }
     
     func setHSB(){
+        var max : Double
+        var min : Double
+        var h : Double = 0
+        var s : Double = 0
+        var v : Double = 0
+        var R : Double = Double(rFinal)
+        var G : Double  = Double(gFinal)
+        var B : Double  = Double(bFinal)
+        var rP : Double
+        var gP : Double
+        var bP : Double
         
+        rP = R*100/255
+        gP = G*100/255
+        bP = B*100/255
+        
+        if rP <= gP {
+            min = rP
+        }else {
+            min = gP
+        }
+        
+        if min > bP {
+            min = bP
+        }
+        
+        if rP >= gP {
+            max = rP
+        }else {
+            max = gP
+        }
+        
+        if max < bP {
+            max = bP
+        }
+        
+        var delta = max - min
+        
+        if delta != 0 {
+            if max == rP {
+                h = 60*(((gP-bP)/delta)%6)
+            } else if max == gP {
+                h = 60*(((bP-rP)/delta)+2)
+            } else if max == bP {
+                h = 60*(((rP-gP)/delta)+4)
+            }
+            
+            if max == 0 {
+                s = 0
+            } else {
+                s = delta/max * 100
+            }
+        } else {
+            h = 0
+        }
+        v = max
+        
+        hsb = "(\(Int(h))º,\(Int(s))%,\(Int(v))%)"
     }
     
     func hideAdds(){
