@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var color3: UIButton!
     @IBOutlet weak var color2: UIButton!
     @IBOutlet weak var color1: UIButton!
+    @IBOutlet weak var addColorFinalButton: UIButton!
     
     
     @IBOutlet weak var hexButton: UIButton!
@@ -37,6 +38,7 @@ class ViewController: UIViewController {
     
     //Views
     @IBOutlet weak var homeView: UIView!
+    @IBOutlet weak var addView: UIView!
     
     //***** VARIABLES *****
     
@@ -51,7 +53,13 @@ class ViewController: UIViewController {
     @IBAction func addColor(sender: AnyObject) {
         add5ColorButton.hidden = true
         add4ColorButton.hidden = false
+        addView.hidden = false
     }
+    
+    @IBAction func addColorFinal(sender: AnyObject) {
+        addView.hidden = true
+    }
+    
     
     @IBAction func showHEX(sender: AnyObject) {
         cleanHexRgbHsb()
@@ -78,6 +86,7 @@ class ViewController: UIViewController {
         
         hideColorsAndAdds()
         add5ColorButton.hidden = false
+        addView.hidden = true
         
     }
 
