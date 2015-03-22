@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     //***** OUTLETS ******
     //Buttons
     @IBOutlet weak var deleteColorsButton: UIButton!
-    
     @IBOutlet weak var add5ColorButton: UIButton!
     @IBOutlet weak var add4ColorButton: UIButton!
     @IBOutlet weak var add3ColorButton: UIButton!
@@ -24,21 +23,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var color2: UIButton!
     @IBOutlet weak var color1: UIButton!
     @IBOutlet weak var addColorFinalButton: UIButton!
-    
-    
     @IBOutlet weak var hexButton: UIButton!
     @IBOutlet weak var rgbButton: UIButton!
     @IBOutlet weak var hsbButton: UIButton!
     
-    //Images
-    @IBOutlet weak var mixImage: UIImageView!
+    //Colors
+    @IBOutlet weak var newColor: UILabel!
     
     //Labels
     @IBOutlet weak var resultLabel: UILabel!
     
+    
     //Views
     @IBOutlet weak var homeView: UIView!
     @IBOutlet weak var addView: UIView!
+    
+    //Sliders
+    @IBOutlet weak var rSlider: UISlider!
+    @IBOutlet weak var gSlider: UISlider!
+    @IBOutlet weak var bSlider: UISlider!
+    
     
     //***** VARIABLES *****
     
@@ -51,13 +55,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addColor(sender: AnyObject) {
-        add5ColorButton.hidden = true
-        add4ColorButton.hidden = false
-        addView.hidden = false
+        UIView.animateWithDuration(0.2, animations: {
+            self.addView.alpha = 1
+        })
+        
     }
     
     @IBAction func addColorFinal(sender: AnyObject) {
-        addView.hidden = true
+        UIView.animateWithDuration(0.2, animations: {
+            self.addView.alpha = 0
+        })
     }
     
     
@@ -80,13 +87,15 @@ class ViewController: UIViewController {
         hsbButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
     }
 
-
+    //***** ViedDidLoad *****
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addView.alpha = 0
         hideColorsAndAdds()
         add5ColorButton.hidden = false
-        addView.hidden = true
+        //addView.hidden = true
+        
+
         
     }
 
@@ -94,7 +103,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
+    
+    //***** FUNCTIONS *****
+    
     func hideColorsAndAdds(){
         color5.hidden = true
         color4.hidden = true
@@ -116,5 +132,7 @@ class ViewController: UIViewController {
         rgbButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         hsbButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
     }
+    
+    
 }
 
