@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     //Colors
     @IBOutlet weak var newColor: UILabel!
     @IBOutlet weak var mixImage: UIButton!
-    @IBOutlet weak var finalColorImage: UIImageView!
+    @IBOutlet weak var shareColorLabel: UILabel!
     
     //Views
     @IBOutlet weak var homeView: UIView!
@@ -43,6 +43,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var rSlider: UISlider!
     @IBOutlet weak var gSlider: UISlider!
     @IBOutlet weak var bSlider: UISlider!
+    @IBOutlet weak var shareView: UIView!
     
     //TextFields
     @IBOutlet weak var rTextField: UITextField!
@@ -53,6 +54,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var copiedImage: UIImageView!
     @IBOutlet weak var deleteColorImage: UIImageView!
     @IBOutlet weak var imageSaved: UIImageView!
+    
+    //Labels
+    @IBOutlet weak var shareHex: UILabel!
+    @IBOutlet weak var shareRgb: UILabel!
+    @IBOutlet weak var shareHsb: UILabel!
+    
     
     
     //***** VARIABLES *****
@@ -333,21 +340,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func copyResult(sender: AnyObject) {
-        
-        
-        
         UIView.animateWithDuration(0.2, animations: {
                 self.copiedImage.alpha = 0.8
         })
         
-        
-        
         UIView.animateWithDuration(0.2, delay: 0.3, options: nil, animations: {
             self.copiedImage.alpha = 0
         }, completion: nil)
-        
-        
-        
         
         if hexPressed {
             UIPasteboard.generalPasteboard().string = hex
@@ -356,31 +355,32 @@ class ViewController: UIViewController {
         } else if hsbPressed{
             UIPasteboard.generalPasteboard().string = hsb
         }
-        
-        
     }
     
     @IBAction func saveImage(sender: AnyObject) {
         if sender.state == UIGestureRecognizerState.Began{
             if arrayR.count != 0 {
-                var size = CGSizeMake(500,500)
-                var colorForImage = UIColor(red: CGFloat(rFinal)/255, green: CGFloat(gFinal)/255, blue: CGFloat(bFinal)/255, alpha: 1.0)
-                var rect = CGRectMake(0, 0, 500, 500)
-                UIGraphicsBeginImageContextWithOptions(size, false, 0)
-                colorForImage.setFill()
-                UIRectFill(rect)
-                var image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+                shareHex.text = "HEX: \(hex)"
+                shareRgb.text = "RGB: \(rgb)"
+                shareHsb.text = "HSV: \(hsb)"
+                
+                UIGraphicsBeginImageContextWithOptions(shareView.frame.size, true, 0.0)
+                shareView.layer.renderInContext(UIGraphicsGetCurrentContext())
+                let screenshot = UIGraphicsGetImageFromCurrentImageContext()
                 UIGraphicsEndImageContext()
-                UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
                 
-                UIView.animateWithDuration(0.2, animations: {
-                    self.imageSaved.alpha = 0.8
-                })
+                let textToShare = "This is the color I just mix with Color Mixer"
+                let urlToShare = NSURL(string: "itms-apps:itunes.apple.com/app/id**********")!
                 
-                UIView.animateWithDuration(0.2, delay: 0.3, options: nil, animations: {
-                    self.imageSaved.alpha = 0
-                    }, completion: nil)
-
+                let activityViewController = UIActivityViewController(activityItems: [textToShare, urlToShare, screenshot], applicationActivities: nil)
+                
+                activityViewController.excludedActivityTypes = [
+                    UIActivityTypeAssignToContact,
+                    UIActivityTypeAddToReadingList,
+                    UIActivityTypeAssignToContact,
+                ]
+                
+                self.presentViewController(activityViewController, animated: true, completion: nil)
             }
         }
     }
@@ -656,13 +656,19 @@ class ViewController: UIViewController {
         
         if hexPressed {
             resultButton.setTitle(hex, forState: UIControlState.Normal)
+            
         } else if rgbPressed {
             resultButton.setTitle(rgb, forState: UIControlState.Normal)
+            
         } else if hsbPressed{
             resultButton.setTitle(hsb, forState: UIControlState.Normal)
+            
         }
         
+        
+        
         mixImage.backgroundColor = UIColor(red: CGFloat(rFinal)/255, green: CGFloat(gFinal)/255, blue: CGFloat(bFinal)/255, alpha: 1.0)
+        shareColorLabel.backgroundColor = UIColor(red: CGFloat(rFinal)/255, green: CGFloat(gFinal)/255, blue: CGFloat(bFinal)/255, alpha: 1.0)
     }
 }
 

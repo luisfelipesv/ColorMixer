@@ -16,12 +16,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nf9-Cr-SqW" userLabel="shareView">
+                                <rect key="frame" x="0.0" y="34" width="500" height="630"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPw-bv-nmq">
+                                        <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
+                                        <color key="backgroundColor" red="0.48492823229999998" green="1" blue="0.58858922830000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HEX: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKb-Z0-nht">
+                                        <rect key="frame" x="8" y="513" width="500" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxS-My-lRr">
+                                        <rect key="frame" x="0.0" y="500" width="500" height="2"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RGB: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8X2-Up-rJf">
+                                        <rect key="frame" x="8" y="551" width="500" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HSV: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfL-3W-1KZ">
+                                        <rect key="frame" x="8" y="589" width="500" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lz7-bi-3jy" userLabel="HomeView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparentBg" translatesAutoresizingMaskIntoConstraints="NO" id="l8t-rH-whu" userLabel="finalColor">
-                                        <rect key="frame" x="0.0" y="280" width="375" height="267"/>
-                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparentBg" translatesAutoresizingMaskIntoConstraints="NO" id="fTs-zv-1NK">
                                         <rect key="frame" x="0.0" y="280" width="375" height="267"/>
                                     </imageView>
@@ -403,7 +438,6 @@
                         <outlet property="copiedImage" destination="edW-Mm-HUX" id="kC0-La-QBg"/>
                         <outlet property="deleteColorImage" destination="OsH-b7-Eig" id="vBu-ge-Inb"/>
                         <outlet property="deleteColorsButton" destination="zTj-cZ-jfX" id="j52-MF-05g"/>
-                        <outlet property="finalColorImage" destination="l8t-rH-whu" id="AcE-4m-mQ9"/>
                         <outlet property="gSlider" destination="7pB-qg-Nsq" id="y6T-3j-xdV"/>
                         <outlet property="gTextField" destination="xK8-kk-H3Y" id="9ne-dR-LEN"/>
                         <outlet property="hexButton" destination="jQr-dm-rXG" id="cTq-ix-7qU"/>
@@ -417,6 +451,11 @@
                         <outlet property="rTextField" destination="0w1-yi-5JY" id="qak-Es-3VD"/>
                         <outlet property="resultButton" destination="VOp-Oo-41K" id="RNX-UA-3au"/>
                         <outlet property="rgbButton" destination="iy9-tE-PNu" id="bO7-OG-Ryr"/>
+                        <outlet property="shareColorLabel" destination="kPw-bv-nmq" id="2Zg-Hm-6wO"/>
+                        <outlet property="shareHex" destination="JKb-Z0-nht" id="1aD-wU-Utl"/>
+                        <outlet property="shareHsb" destination="pfL-3W-1KZ" id="iQd-1x-K7Q"/>
+                        <outlet property="shareRgb" destination="8X2-Up-rJf" id="aXh-Yo-Hjc"/>
+                        <outlet property="shareView" destination="nf9-Cr-SqW" id="EdY-zt-pMj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -445,7 +484,7 @@
                         <action selector="handleGesture5:" destination="vXZ-lx-hvc" id="3hA-me-0G0"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="FrZ-nc-Q5O">
+                <pongPressGestureRecognizer allowableMovement="7" minimumPressDuration="0.30000000000000004" id="FrZ-nc-Q5O">
                     <connections>
                         <action selector="saveImage:" destination="vXZ-lx-hvc" id="3lU-YQ-hqe"/>
                     </connections>
