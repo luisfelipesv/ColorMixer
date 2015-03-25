@@ -318,7 +318,9 @@ class ViewController: UIViewController {
         hexPressed = true
         hexButton.backgroundColor = UIColor.whiteColor()
         hexButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
-        resultButton.setTitle(hex, forState: UIControlState.Normal)
+        if arrayR.count > 0 {
+            resultButton.setTitle(hex, forState: UIControlState.Normal)
+        }
     }
     
     @IBAction func showRGB(sender: AnyObject) {
@@ -327,7 +329,9 @@ class ViewController: UIViewController {
         rgbPressed = true
         rgbButton.backgroundColor = UIColor.whiteColor()
         rgbButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
-        resultButton.setTitle(rgb, forState: UIControlState.Normal)
+        if arrayR.count > 0 {
+            resultButton.setTitle(rgb, forState: UIControlState.Normal)
+        }
     }
     
     @IBAction func showHSB(sender: AnyObject) {
@@ -336,7 +340,9 @@ class ViewController: UIViewController {
         hsbPressed = true
         hsbButton.backgroundColor = UIColor.whiteColor()
         hsbButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
-        resultButton.setTitle(hsb, forState: UIControlState.Normal)
+        if arrayR.count > 0 {
+            resultButton.setTitle(hsb, forState: UIControlState.Normal)
+        }
     }
 
     @IBAction func copyResult(sender: AnyObject) {

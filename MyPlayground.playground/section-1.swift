@@ -4,19 +4,16 @@ import UIKit
 
 import Foundation
 
-var arrayR = [Int]()
-
-arrayR.count
-arrayR.append(255)
-
-arrayR.count
-arrayR[0]
 
 
 
-mySampleColorLabel.text=NSString(format: "%i,%i,%i", Int(red * 255),Int(green * 255),Int(blue * 255))
-let myTitleText = NSString(format: "%6.2f,%6.2f,%6.2f", Float(red),Float(green),Float(blue))
-mySampleColorButton.setTitle(myTitleText, forState: .Normal)
+
+
+
+
+var hi: UIImageView
+
+
 
 var red = 0
 var green = 128
