@@ -376,7 +376,7 @@ class ViewController: UIViewController {
                 UIGraphicsEndImageContext()
                 
                 let textToShare = "This is the color I just mix with Color Mixer"
-                let urlToShare = NSURL(string: "itms-apps:itunes.apple.com/app/id**********")!
+                let urlToShare = NSURL(string: "itms-apps:itunes.apple.com/app/id979791958")!
                 
                 let activityViewController = UIActivityViewController(activityItems: [textToShare, urlToShare, screenshot], applicationActivities: nil)
                 
