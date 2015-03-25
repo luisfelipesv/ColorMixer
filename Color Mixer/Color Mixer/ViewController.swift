@@ -424,17 +424,17 @@ class ViewController: UIViewController {
     
     func setHEX(){
         var hexR = String(rFinal, radix: 16, uppercase: true)
-        if count(hexR)<2 {
+        if countElements(hexR)<2 {
             hexR = "0" + hexR;
         }
 
         var hexG = String(gFinal, radix: 16, uppercase: true)
-        if count(hexG)<2 {
+        if countElements(hexG)<2 {
             hexG = "0" + hexG;
         }
 
         var hexB = String(bFinal, radix: 16, uppercase: true)
-        if count(hexB)<2 {
+        if countElements(hexB)<2 {
             hexB = "0" + hexB;
         }
         hex = "#\(hexR)\(hexG)\(hexB)"
